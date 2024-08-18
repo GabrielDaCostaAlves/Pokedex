@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/ivSprite"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
@@ -17,25 +17,23 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/charizard"
-        tools:srcCompat="@drawable/charizard" />
+        app:srcCompat="@drawable/inicio"
+        android:contentDescription="@string/Pokemon"/>
 
     <TextView
         android:id="@+id/tvId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:text="N° 0000"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivSprite" />
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
 
     <TextView
         android:id="@+id/tvName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="PokemonName"
+        android:text="@string/inicio"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="@+id/tvId"
         app:layout_constraintTop_toBottomOf="@+id/tvId" />
@@ -45,7 +43,6 @@
         android:layout_width="85dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Type1"
         android:textAlignment="center"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/tvName"
@@ -56,7 +53,6 @@
         android:layout_width="85dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:text="Type2"
         android:textAlignment="center"
         android:textStyle="bold"
         android:visibility="invisible"
@@ -69,25 +65,33 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:ems="10"
-        android:hint="ex: Charmander"
+        android:hint="@string/exemplo"
         android:inputType="text"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvType2" />
+        app:layout_constraintTop_toBottomOf="@+id/tvType2"
+        android:autofillHints="name"/>
 
     <Button
         android:id="@+id/bPesquisar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pesquisar"
+        android:text="@string/pesquisar"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etBusca" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.36" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
