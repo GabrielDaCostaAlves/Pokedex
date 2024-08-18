@@ -1,5 +1,6 @@
-package com.example.pokedex.network.api
+package com.example.pokedex.network
 
+import com.example.pokedex.network.api.PokeApiService
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -12,5 +13,8 @@ class RetrofitHelper {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
+    }
+    fun getApiService(): PokeApiService {
+        return retrofit.create(PokeApiService::class.java)
     }
 }
