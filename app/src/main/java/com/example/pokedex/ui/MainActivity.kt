@@ -43,6 +43,7 @@ class MainActivity : ComponentActivity() {
                 binding.tvId.text = id
 
                 if (pokemon.types.isNotEmpty()) {
+                    binding.tvType1.visibility = View.VISIBLE
                     val tipo = pokemon.types[0].type.name
                     binding.tvType1.text = tipo
                     val corFundo = Utils.TIPO_COLOR_FUNDO[tipo] ?: Color.WHITE
