@@ -2,8 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:background="#1E1F22"
+    android:backgroundTint="#F1F1F1"
     tools:context=".ui.PokemonItemActivity">
 
     <TextView
@@ -11,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
         tools:text="N° 0000" />
@@ -22,8 +25,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:textAlignment="center"
+        android:textSize="16sp"
         android:textStyle="bold"
-        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/tvType1"
         app:layout_constraintStart_toEndOf="@+id/tvType1"
         app:layout_constraintTop_toTopOf="@+id/tvType1"
         tools:text="Tipo2" />
@@ -33,7 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:textSize="24sp"
+        android:textSize="34sp"
         app:layout_constraintStart_toStartOf="@+id/tvId"
         app:layout_constraintTop_toBottomOf="@+id/tvId"
         tools:text="Pokemon" />
@@ -43,31 +47,33 @@
         android:layout_width="85dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
         android:textAlignment="center"
+        android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/tvName"
         app:layout_constraintTop_toBottomOf="@+id/tvName"
         tools:text="Tipo1" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="409dp"
-        android:layout_height="268dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/ivSprite"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_marginStart="94dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="85dp"
-            android:layout_marginBottom="26dp"
+            android:id="@+id/ivImage"
+            android:layout_width="230dp"
+            android:layout_height="227dp"
+            android:layout_marginTop="16dp"
             android:contentDescription="@string/Pokemon"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

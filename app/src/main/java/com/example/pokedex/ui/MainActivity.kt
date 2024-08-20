@@ -1,5 +1,6 @@
 package com.example.pokedex.ui
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
@@ -71,7 +72,7 @@ class MainActivity : ComponentActivity() {
                 Picasso.get()
                     .load(pokemon.sprites.other.officialartwork.front_default)
                     .placeholder(R.drawable.pokeball)
-                    .into(binding.ivSprite)
+                    .into(binding.ivImage)
 
             } else {
                 binding.tvId.text = ""
@@ -80,14 +81,16 @@ class MainActivity : ComponentActivity() {
                 binding.tvType1.visibility = View.GONE
                 binding.tvType2.text = ""
                 binding.tvType2.visibility = View.GONE
-                binding.ivSprite.setImageResource(R.drawable.inicio)
+                binding.ivImage.setImageResource(R.drawable.inicio)
 
             }
         }
 
         // Inicia a busca pelo Pokémon
         binding.bPesquisar.setOnClickListener {
-            pokePesquisar()
+            //pokePesquisar()
+            val intent = Intent(this,RecycleActivity::class.java)
+            startActivity(intent)
         }
 
     }

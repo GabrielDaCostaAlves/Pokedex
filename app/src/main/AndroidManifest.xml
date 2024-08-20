@@ -18,10 +18,10 @@
             android:name=".ui.PokemonItemActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.RecycleActivity"
+            android:name=".ui.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".ui.RecycleActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
