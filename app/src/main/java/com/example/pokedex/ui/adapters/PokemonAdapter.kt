@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.pokedex.R
@@ -14,7 +15,10 @@ import com.example.pokedex.databinding.ActivityPokemonItemBinding
 import com.example.pokedex.utils.Utils
 import com.squareup.picasso.Picasso
 
-class PokemonAdapter(private val pokemons: List<Pokemon>) :
+class PokemonAdapter(
+    private val pokemons: List<Pokemon>,
+    private val clique: (String) -> Unit
+) :
     Adapter<PokemonAdapter.PokemonViewHolder>() {
 
 
@@ -26,6 +30,7 @@ class PokemonAdapter(private val pokemons: List<Pokemon>) :
         val tvType1: TextView = binding.tvType1
         val tvType2: TextView = binding.tvType2
         val ivImage: ImageView = binding.ivImage
+        val cItemPoke: ConstraintLayout = binding.cItemPoke
 
     }
 
@@ -76,6 +81,10 @@ class PokemonAdapter(private val pokemons: List<Pokemon>) :
             .placeholder(R.drawable.pokeball)
             .into(binding.ivImage)
 
+        binding.cItemPoke.setOnClickListener {
+            val pokeid = pokemons[position].id.toString()
+            clique(pokeid)
+        }
 
         //fim
     }

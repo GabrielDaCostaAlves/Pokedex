@@ -22,6 +22,99 @@ object Utils {
         "steel" to Color.BLACK,
         "fairy" to Color.BLACK
     )
+    val TYPE_WEAKNESSES_RESISTANCES_IMMUNITIES  = mapOf(
+        "Normal" to mapOf(
+            "weaknesses" to listOf("Fighting"),
+            "resistances" to emptyList<String>(),
+            "immunities" to listOf("Ghost")
+        ),
+        "Fire" to mapOf(
+            "weaknesses" to listOf("Water", "Ground", "Rock"),
+            "resistances" to listOf("Fire", "Grass", "Ice", "Bug", "Steel", "Fairy"),
+            "immunities" to emptyList<String>()
+        ),
+        "Water" to mapOf(
+            "weaknesses" to listOf("Electric", "Grass"),
+            "resistances" to listOf("Fire", "Water", "Ice", "Steel"),
+            "immunities" to emptyList<String>()
+        ),
+        "Electric" to mapOf(
+            "weaknesses" to listOf("Ground"),
+            "resistances" to listOf("Electric", "Flying", "Steel"),
+            "immunities" to emptyList<String>()
+        ),
+        "Grass" to mapOf(
+            "weaknesses" to listOf("Fire", "Ice", "Poison", "Flying", "Bug"),
+            "resistances" to listOf("Water", "Electric", "Grass", "Ground"),
+            "immunities" to emptyList<String>()
+        ),
+        "Ice" to mapOf(
+            "weaknesses" to listOf("Fire", "Fighting", "Rock", "Steel"),
+            "resistances" to listOf("Ice"),
+            "immunities" to emptyList<String>()
+        ),
+        "Fighting" to mapOf(
+            "weaknesses" to listOf("Flying", "Psychic", "Fairy"),
+            "resistances" to listOf("Bug", "Rock", "Dark"),
+            "immunities" to emptyList<String>()
+        ),
+        "Poison" to mapOf(
+            "weaknesses" to listOf("Ground", "Psychic"),
+            "resistances" to listOf("Grass", "Fighting", "Poison", "Bug", "Fairy"),
+            "immunities" to emptyList<String>()
+        ),
+        "Ground" to mapOf(
+            "weaknesses" to listOf("Water", "Grass", "Ice"),
+            "resistances" to listOf("Poison", "Rock"),
+            "immunities" to listOf("Electric")
+        ),
+        "Flying" to mapOf(
+            "weaknesses" to listOf("Electric", "Ice", "Rock"),
+            "resistances" to listOf("Grass", "Fighting", "Bug"),
+            "immunities" to listOf("Ground")
+        ),
+        "Psychic" to mapOf(
+            "weaknesses" to listOf("Bug", "Ghost", "Dark"),
+            "resistances" to listOf("Fighting", "Psychic"),
+            "immunities" to emptyList<String>()
+        ),
+        "Bug" to mapOf(
+            "weaknesses" to listOf("Fire", "Flying", "Rock"),
+            "resistances" to listOf("Grass", "Fighting", "Ground"),
+            "immunities" to emptyList<String>()
+        ),
+        "Rock" to mapOf(
+            "weaknesses" to listOf("Water", "Grass", "Fighting", "Ground", "Steel"),
+            "resistances" to listOf("Normal", "Fire", "Poison", "Flying"),
+            "immunities" to emptyList<String>()
+        ),
+        "Ghost" to mapOf(
+            "weaknesses" to listOf("Ghost", "Dark"),
+            "resistances" to listOf("Poison", "Bug"),
+            "immunities" to listOf("Normal", "Fighting")
+        ),
+        "Dragon" to mapOf(
+            "weaknesses" to listOf("Ice", "Dragon", "Fairy"),
+            "resistances" to listOf("Fire", "Water", "Electric", "Grass"),
+            "immunities" to emptyList<String>()
+        ),
+        "Dark" to mapOf(
+            "weaknesses" to listOf("Fighting", "Bug", "Fairy"),
+            "resistances" to listOf("Ghost", "Dark"),
+            "immunities" to listOf("Psychic")
+        ),
+        "Steel" to mapOf(
+            "weaknesses" to listOf("Fire", "Fighting", "Ground"),
+            "resistances" to listOf("Normal", "Grass", "Ice", "Flying", "Psychic", "Bug", "Rock", "Dragon", "Steel", "Fairy"),
+            "immunities" to listOf("Poison")
+        ),
+        "Fairy" to mapOf(
+            "weaknesses" to listOf("Poison", "Steel"),
+            "resistances" to listOf("Fighting", "Bug", "Dark"),
+            "immunities" to listOf("Dragon")
+        )
+    )
+
     val TIPO_COLOR_FUNDO = mapOf(
         "fire" to Color.parseColor("#F08030"),
         "water" to Color.parseColor("#6890F0"),
