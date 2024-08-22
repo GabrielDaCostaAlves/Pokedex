@@ -4,7 +4,7 @@
     <string name="notfound">Pokémon não encontrado</string>
     <string name="exemplo">ex: Charmander</string>
     <string name="inicio">Pesquise o pokémon abaixo:</string>
-    <string name="pesquisar">Pesquisar</string>
+    <string name="pesquisar">Digite o Pokémon</string>
 
 
 </resources>
