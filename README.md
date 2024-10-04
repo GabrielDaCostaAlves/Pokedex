@@ -1,9 +1,6 @@
 
 # Pokedex
 
-## Criando um app, para simular a pagina do pokemon.
-
-Eu me desafiei a criar um app, para simular a pagina online, do site do pokemon. 
 
 ## 🎯 Sobre o projeto
 
