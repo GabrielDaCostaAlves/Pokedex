@@ -10,7 +10,7 @@ Eu me desafiei a criar um app, para simular a pagina online, do site do pokemon.
 O desafio é usar uma api e criar um app que pareça com a pagina inicial do pokemon.
 
 ## 📚 Estrutura/
-- [Pokemon](https://github.com/GabrielDaCostaAlves/dio-trilha-java-basico/tree/main/POODesafio)/ Pasta com projeto
+- [Pokemon]([https://github.com/GabrielDaCostaAlves/dio-trilha-java-basico/tree/main/POODesafio](https://github.com/GabrielDaCostaAlves/Pokedex/))/ Pasta com projeto
 - ```README.md```  Informações do projeto.
 
 ##  🛠️ Tecnologias
