@@ -1,6 +1,5 @@
 package com.example.pokedex.ui
 
-import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
@@ -88,9 +87,8 @@ class MainActivity : ComponentActivity() {
 
         // Inicia a busca pelo Pokémon
         binding.bPesquisar.setOnClickListener {
-            //pokePesquisar()
-            val intent = Intent(this,RecycleActivity::class.java)
-            startActivity(intent)
+            pokePesquisar()
+
         }
 
     }
